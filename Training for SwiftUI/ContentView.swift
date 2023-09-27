@@ -64,21 +64,28 @@ struct ContentView: View {
                 Rectangle()
                     .foregroundColor(.blue)
                     .frame(width: 300, height: 100)
-            HStack {
-                Rectangle()
-                    .foregroundColor(.black)
-                    .frame(width:70,height: 30)
-                Rectangle()
-                    .foregroundColor(.black)
-                    .frame(width:70,height: 30)
-                }
+                FootView()
             }
         }
     }
-        
-        struct ContentView_Previews: PreviewProvider {
-            static var previews: some View {
-                ContentView()
-            }
-    }
+     
 
+struct FootView : View {
+    var body: some View {
+        HStack {
+            Rectangle()
+                .foregroundColor(.black)
+                .frame(width:70,height: 30)
+            Rectangle()
+                .foregroundColor(.black)
+                .frame(width:70,height: 30)
+        }
+        
+    }
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
+    }
+}
